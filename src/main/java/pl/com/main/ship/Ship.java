@@ -17,4 +17,25 @@ public class Ship implements Serializable
     {
         return name;
     }
+
+    public int getSpace()
+    {
+        return space;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setSpace(int space)
+    {
+        this.space = space;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Name: " + name + " Space: " + space;
+    }
 }
