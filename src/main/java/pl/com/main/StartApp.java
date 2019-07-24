@@ -1,4 +1,16 @@
 package pl.com.main;
 
-public class StartApp {
+import pl.com.main.menu.ScreenManager;
+
+public class StartApp
+{
+    public static void start()
+    {
+        ScreenManager screenManager = new ScreenManager();
+        screenManager.manager();
+    }
+    public static void main(String[] args)
+    {
+        start();
+    }
 }
