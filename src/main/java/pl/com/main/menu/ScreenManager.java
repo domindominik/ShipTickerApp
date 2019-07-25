@@ -2,6 +2,7 @@ package pl.com.main.menu;
 
 import pl.com.main.cruise.CruiseScreen;
 import pl.com.main.cruise.CruiseStatusScreen;
+import pl.com.main.file.SaveToFileScreen;
 import pl.com.main.port.Port;
 
 public class ScreenManager
@@ -10,7 +11,7 @@ public class ScreenManager
     MainScreen mainScreen = new MainScreen();
     CruiseScreen cruiseScreen = new CruiseScreen(port);
     CruiseStatusScreen cruiseStatusScreen = new CruiseStatusScreen(port);
-
+    SaveToFileScreen saveToFileScreen = new SaveToFileScreen(port);
     public ScreenManager()
     {
 
@@ -41,6 +42,11 @@ public class ScreenManager
         if (chosenScreen == 2)
         {
             return cruiseStatusScreen.interact();
+        }
+
+        if (chosenScreen == 3)
+        {
+            return saveToFileScreen.interact();
         }
 
         return mainScreen.interact();

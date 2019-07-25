@@ -18,7 +18,7 @@ public class CruiseStatusScreen implements Screen
         System.out.println(port.getCruiseList().size());
         for (Cruise cruise: port.getCruiseList())
         {
-            System.out.println(cruise.getShip().toString());
+            System.out.println(cruise.getShip().toString() + " Destination: " + cruise.getDestination());
         }
         return 0;
     }
