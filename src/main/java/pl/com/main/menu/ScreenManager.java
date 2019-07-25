@@ -2,20 +2,23 @@ package pl.com.main.menu;
 
 import pl.com.main.cruise.CruiseScreen;
 import pl.com.main.cruise.CruiseStatusScreen;
+import pl.com.main.file.LoadFromFileScreen;
 import pl.com.main.file.SaveToFileScreen;
 import pl.com.main.port.Port;
 
 public class ScreenManager
 {
-    private static Port port = new Port("AMSTERDAM");
+    private static Port port = new Port("AMSTERDAM");;
     MainScreen mainScreen = new MainScreen();
     CruiseScreen cruiseScreen = new CruiseScreen(port);
     CruiseStatusScreen cruiseStatusScreen = new CruiseStatusScreen(port);
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(port);
-    public ScreenManager()
-    {
+    LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen();
 
-    }
+    /*public ScreenManager()
+    {
+        this.port = new Port("AMSTERDAM");
+    }*/
 
     int chosenScreen;
     public void manager()
@@ -49,8 +52,15 @@ public class ScreenManager
             return saveToFileScreen.interact();
         }
 
+        if (chosenScreen == 4)
+        {
+            return loadFromFileScreen.interact();
+        }
         return mainScreen.interact();
     }
 
-
+    public static void setPort(Port port)
+    {
+        ScreenManager.port = port;
+    }
 }
