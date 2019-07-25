@@ -8,7 +8,7 @@ import pl.com.main.port.Port;
 
 public class ScreenManager
 {
-    private static Port port = new Port("AMSTERDAM");;
+    private static Port port = new Port("AMSTERDAM");
     MainScreen mainScreen = new MainScreen();
     CruiseScreen cruiseScreen = new CruiseScreen(port);
     CruiseStatusScreen cruiseStatusScreen = new CruiseStatusScreen(port);

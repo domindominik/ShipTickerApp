@@ -9,9 +9,9 @@ import java.io.ObjectInputStream;
 
 public class LoadFromFile
 {
-    private Port port;
+    /*private Port port;
 
-    /*public LoadFromFile()
+    public LoadFromFile()
     {
         this.port = port;
     }*/
@@ -22,7 +22,8 @@ public class LoadFromFile
         {
             try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream))
             {
-                port = (Port) objectInputStream.readObject();
+                ScreenManager.setPort((Port) objectInputStream.readObject());
+                //port = (Port) objectInputStream.readObject();
                 System.out.println("ok");
             }
         }
