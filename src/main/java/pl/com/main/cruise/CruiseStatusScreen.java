@@ -7,7 +7,7 @@ public class CruiseStatusScreen implements Screen
 {
     private Port port;
 
-    public CruiseStatusScreen()
+    public CruiseStatusScreen(Port port)
     {
         this.port = port;
     }
@@ -15,9 +15,10 @@ public class CruiseStatusScreen implements Screen
     @Override
     public int interact()
     {
+        System.out.println(port.getCruiseList().size());
         for (Cruise cruise: port.getCruiseList())
         {
-            cruise.getShip().toString();
+            System.out.println(cruise.getShip().toString());
         }
         return 0;
     }

@@ -3,6 +3,7 @@ package pl.com.main.port;
 import pl.com.main.cruise.Cruise;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Port implements Serializable
@@ -13,7 +14,7 @@ public class Port implements Serializable
     public Port(String name)
     {
         this.name = name;
-        this.cruiseList = cruiseList;
+        this.cruiseList = new ArrayList<>();
     }
 
     public String getName()

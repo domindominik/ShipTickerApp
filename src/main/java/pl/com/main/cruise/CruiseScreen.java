@@ -12,13 +12,13 @@ public class CruiseScreen implements Screen
     private Cruise cruise;
     private Port port;
 
-    public CruiseScreen()
+    public CruiseScreen(Port port)
     {
         this.cruise = cruise;
         this.port = port;
     }
 
-    @Override
+    //@Override
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);

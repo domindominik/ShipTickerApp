@@ -8,17 +8,18 @@ public class ScreenManager
 {
     private static Port port = new Port("AMSTERDAM");
     MainScreen mainScreen = new MainScreen();
-    CruiseScreen cruiseScreen = new CruiseScreen();
-    CruiseStatusScreen cruiseStatusScreen = new CruiseStatusScreen();
+    CruiseScreen cruiseScreen = new CruiseScreen(port);
+    CruiseStatusScreen cruiseStatusScreen = new CruiseStatusScreen(port);
 
     public ScreenManager()
     {
 
     }
 
+    int chosenScreen;
     public void manager()
     {
-        int chosenScreen = 0;
+        chosenScreen = 0;
         while (true)
         {
             chosenScreen = chosenScreen(chosenScreen);
