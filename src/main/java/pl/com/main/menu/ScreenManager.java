@@ -4,21 +4,27 @@ import pl.com.main.cruise.CruiseScreen;
 import pl.com.main.cruise.CruiseStatusScreen;
 import pl.com.main.file.LoadFromFileScreen;
 import pl.com.main.file.SaveToFileScreen;
+import pl.com.main.human.HumanScreen;
 import pl.com.main.port.Port;
 
 public class ScreenManager
 {
+    //private Port port;
     private static Port port = new Port("AMSTERDAM");
     MainScreen mainScreen = new MainScreen();
+    TicketMenuScreen ticketMenuScreen = new TicketMenuScreen();
+
     CruiseScreen cruiseScreen = new CruiseScreen(port);
     CruiseStatusScreen cruiseStatusScreen = new CruiseStatusScreen(port);
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(port);
     LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen();
+    HumanScreen humanScreen = new HumanScreen(port);
 
-    /*public ScreenManager()
+    public ScreenManager()
     {
-        this.port = new Port("AMSTERDAM");
-    }*/
+        //this.port = new Port("AMSTERDAM");
+        this.port = port;
+    }
 
     int chosenScreen;
     public void manager()
@@ -56,11 +62,23 @@ public class ScreenManager
         {
             return loadFromFileScreen.interact();
         }
+
+        if (chosenScreen == 5)
+        {
+            return ticketMenuScreen.interact();
+        }
+
+        if (chosenScreen == 6)
+        {
+            return humanScreen.interact();
+        }
+
         return mainScreen.interact();
     }
 
     public static void setPort(Port port)
     {
         ScreenManager.port = port;
+        //this.port = port;
     }
 }

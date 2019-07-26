@@ -9,12 +9,13 @@ import java.io.ObjectInputStream;
 
 public class LoadFromFile
 {
-    /*private Port port;
+
+    private Port port;
 
     public LoadFromFile()
     {
         this.port = port;
-    }*/
+    }
 
     public void loadFromFile()
     {
