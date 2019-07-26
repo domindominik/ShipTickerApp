@@ -6,17 +6,17 @@ import pl.com.main.port.Port;
 
 public class LoadFromFileScreen implements Screen
 {
-    //private Port port;
+    private Port port;
 
-    /*public LoadFromFileScreen(Port port)
+    public LoadFromFileScreen(Port port)
     {
         this.port = port;
-    }*/
+    }
 
     @Override
     public int interact()
     {
-        LoadFromFile loadFromFile = new LoadFromFile();
+        LoadFromFile loadFromFile = new LoadFromFile(port);
         loadFromFile.loadFromFile();
         return 0;
     }

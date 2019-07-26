@@ -12,7 +12,7 @@ public class LoadFromFile
 
     private Port port;
 
-    public LoadFromFile()
+    public LoadFromFile(Port port)
     {
         this.port = port;
     }

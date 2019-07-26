@@ -17,7 +17,7 @@ public class ScreenManager
     CruiseScreen cruiseScreen = new CruiseScreen(port);
     CruiseStatusScreen cruiseStatusScreen = new CruiseStatusScreen(port);
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(port);
-    LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen();
+    LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen(port);
     HumanScreen humanScreen = new HumanScreen(port);
 
     public ScreenManager()
