@@ -78,7 +78,8 @@ public class ScreenManager
 
     public static void setPort(Port port)
     {
-        ScreenManager.port = port;
+        ScreenManager.port.setName(port.getName());
+        ScreenManager.port.setCruiseList(port.getCruiseList());
         //this.port = port;
     }
 }

@@ -32,5 +32,11 @@ public class Port implements Serializable
         cruiseList.add(cruise);
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setCruiseList(List<Cruise> cruiseList) {
+        this.cruiseList = cruiseList;
+    }
 }
