@@ -9,8 +9,6 @@ public class Human implements Serializable
     private int age;
     private int price;
     private int place;
-    /*public static final int place = 10;
-    public static final int child = 5;*/
 
     public Human(String name, String surname, int age)
     {

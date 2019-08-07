@@ -36,4 +36,9 @@ public abstract class Vehicle implements Serializable
     {
         this.price = price;
     }
+
+    public void addHumane(Human human)
+    {
+        humanList.add(human);
+    }
 }

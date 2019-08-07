@@ -17,7 +17,7 @@ public class Ship implements Serializable
     public Ship(String name)
     {
         this.name = name;
-        this.space = 1000;
+        this.space = 20;
         this.humanList = new ArrayList<>();
         this.carList = new ArrayList<>();
     }
@@ -50,6 +50,7 @@ public class Ship implements Serializable
 
     public void addCar(Car car)
     {
+        space -= car.getSpaceUnit();
         carList.add(car);
     }
 
