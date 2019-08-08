@@ -8,7 +8,7 @@ public class TicketMenuScreen implements Screen
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1. Human, 2. Car, 3. Motor, 4. Bus, 5. Truck, Exit 0");
+        System.out.println("1. Human, 2. Car, 3. Motor, 4. Bus, 5. Truck, 6. Cargo, Exit 0");
         int select = scanner.nextInt();
 
         switch (select)
@@ -27,6 +27,9 @@ public class TicketMenuScreen implements Screen
 
             case 5:
                 return 10;
+
+            case 6:
+                return 11;
 
             case 0:
                 return 0;

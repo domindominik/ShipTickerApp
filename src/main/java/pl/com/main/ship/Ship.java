@@ -1,5 +1,6 @@
 package pl.com.main.ship;
 
+import pl.com.main.cargo.Cargo;
 import pl.com.main.human.Human;
 import pl.com.main.vehicle.car.Car;
 
@@ -13,6 +14,7 @@ public class Ship implements Serializable
     private int space;
     private List<Human> humanList;
     private List<Car> carList;
+    private List<Cargo> cargoList;
 
     public Ship(String name)
     {
@@ -52,6 +54,12 @@ public class Ship implements Serializable
     {
         space -= car.getSpaceUnit();
         carList.add(car);
+    }
+
+    public void addCargo(Cargo cargo, int volume)
+    {
+        space -= cargo.getVolume();
+        cargoList.add(cargo);
     }
 
     @Override
