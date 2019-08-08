@@ -6,6 +6,7 @@ import pl.com.main.file.LoadFromFileScreen;
 import pl.com.main.file.SaveToFileScreen;
 import pl.com.main.human.HumanScreen;
 import pl.com.main.port.Port;
+import pl.com.main.vehicle.car.CarScreen;
 
 public class ScreenManager
 {
@@ -19,6 +20,7 @@ public class ScreenManager
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(port);
     LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen(port);
     HumanScreen humanScreen = new HumanScreen(port);
+    CarScreen carScreen = new CarScreen(port);
 
     public ScreenManager()
     {
@@ -71,6 +73,11 @@ public class ScreenManager
         if (chosenScreen == 6)
         {
             return humanScreen.interact();
+        }
+
+        if (chosenScreen == 7)
+        {
+            return carScreen.interact();
         }
 
         return mainScreen.interact();
